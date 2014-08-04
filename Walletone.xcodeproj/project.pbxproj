@@ -16,6 +16,7 @@
 		37AFB9538FEC436982A3D386 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 675D59D8AEED4CBC83C3F18F /* libPods.a */; };
 		664DC3EE198F752400ECB3BE /* ConversionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 664DC3ED198F752400ECB3BE /* ConversionView.m */; };
 		664DC3F0198F7A6900ECB3BE /* Uninsta-Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 664DC3EF198F7A6800ECB3BE /* Uninsta-Normal.otf */; };
+		664DC413198FCCDC00ECB3BE /* ToolsSalesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 664DC412198FCCDC00ECB3BE /* ToolsSalesView.m */; };
 		665883D8198EC624001CDA73 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 665883D3198EC624001CDA73 /* RECommonFunctions.m */; };
 		665883D9198EC624001CDA73 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 665883D5198EC624001CDA73 /* RESideMenu.m */; };
 		665883DA198EC624001CDA73 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 665883D7198EC624001CDA73 /* UIViewController+RESideMenu.m */; };
@@ -52,6 +53,8 @@
 		664DC3EC198F752400ECB3BE /* ConversionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConversionView.h; path = Walletone/Components/ConversionView.h; sourceTree = SOURCE_ROOT; };
 		664DC3ED198F752400ECB3BE /* ConversionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConversionView.m; path = Walletone/Components/ConversionView.m; sourceTree = SOURCE_ROOT; };
 		664DC3EF198F7A6800ECB3BE /* Uninsta-Normal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Uninsta-Normal.otf"; sourceTree = SOURCE_ROOT; };
+		664DC411198FCCDC00ECB3BE /* ToolsSalesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolsSalesView.h; path = Walletone/Components/ToolsSalesView.h; sourceTree = SOURCE_ROOT; };
+		664DC412198FCCDC00ECB3BE /* ToolsSalesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToolsSalesView.m; path = Walletone/Components/ToolsSalesView.m; sourceTree = SOURCE_ROOT; };
 		665883D2198EC624001CDA73 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = RECommonFunctions.h; path = RESideMenu/RECommonFunctions.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		665883D3198EC624001CDA73 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = RECommonFunctions.m; path = RESideMenu/RECommonFunctions.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		665883D4198EC624001CDA73 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = RESideMenu.h; path = RESideMenu/RESideMenu.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -200,6 +203,8 @@
 			children = (
 				664DC3EC198F752400ECB3BE /* ConversionView.h */,
 				664DC3ED198F752400ECB3BE /* ConversionView.m */,
+				664DC411198FCCDC00ECB3BE /* ToolsSalesView.h */,
+				664DC412198FCCDC00ECB3BE /* ToolsSalesView.m */,
 			);
 			name = ComponentViews;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				665883E7198ECBFA001CDA73 /* VBRightMenuViewController.m in Sources */,
 				665883E6198ECBFA001CDA73 /* VBLeftMenuViewController.m in Sources */,
 				664DC3EE198F752400ECB3BE /* ConversionView.m in Sources */,
+				664DC413198FCCDC00ECB3BE /* ToolsSalesView.m in Sources */,
 				665883EC198ECC09001CDA73 /* VBAppDelegate.m in Sources */,
 				665883E9198ECBFA001CDA73 /* VBSecondViewController.m in Sources */,
 				665883E5198ECBFA001CDA73 /* VBFirstViewController.m in Sources */,

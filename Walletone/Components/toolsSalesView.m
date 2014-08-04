@@ -1,14 +1,14 @@
 //
-//  ConversionView.m
+//  toolsSalesView.m
 //  Walletone
 //
 //  Created by Viktor Bespalov on 04/08/14.
 //  Copyright (c) 2014 Viktor Bespalov. All rights reserved.
 //
 
-#import "ConversionView.h"
+#import "ToolsSalesView.h"
 
-@implementation ConversionView
+@implementation ToolsSalesView
 {
     NSArray* percentArray;
 }
@@ -22,42 +22,51 @@
         percentArray = dataArray;
         
         NSArray* colorArray = [NSArray arrayWithObjects:
-                               vbRed,
                                vbBlue,
+                               vbLilac,
                                vbOrange,
                                vbGreen,
                                nil];
         
-        NSArray* subTextArray = @[@"Всего",@"Банковские карты",@"Терминалы",@"Салоны связи"];
+        NSArray* imageArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"imageBlue"],
+                               [UIImage imageNamed:@"imageLilac"],
+                               [UIImage imageNamed:@"imageOrange"],
+                               [UIImage imageNamed:@"imageGreen"],nil];
+        
+        NSArray* subTextArray = @[@"Банковские карты",@"Терминалы",@"Со счета мобильного",@"Салоны связи"];
         
         UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(self.frame), 20)];
-        title.text = @"Конверсия по способам оплаты";
+        title.text = @"Инструменты продаж";
         title.textAlignment = NSTextAlignmentCenter;
         title.textColor = [UIColor grayColor];
         title.font = [UIFont fontWithName:@"Uninsta-Normal" size:14];
         [self addSubview:title];
-
+        
         
         CGFloat margin; //отступ справа/слева = 20
         CGFloat indent = margin = 20;
         for (int i=0; i<4; i++) {
-            KAProgressLabel *percentText = [[KAProgressLabel alloc] initWithFrame:CGRectMake(indent, 40, 60, 20)];
+            UIImageView* logo = [[UIImageView alloc] initWithImage:imageArray[i]];
+            logo.frame = CGRectMake(indent, 40, 50, 50);
+            logo.layer.cornerRadius = 25;
+            logo.layer.borderColor = [UIColor grayColor].CGColor;
+            logo.layer.borderWidth = 2;
+            logo.layer.masksToBounds = YES;
+            [self addSubview:logo];
+            
+            KAProgressLabel *percentText = [[KAProgressLabel alloc] initWithFrame:CGRectMake(indent, CGRectGetMaxY(logo.frame)-15, 60, 20)];
             percentText.text = [NSString stringWithFormat:@"0%%"];
             percentText.textAlignment = NSTextAlignmentCenter;
             percentText.textColor = colorArray[i];
             percentText.numberOfLines = 2;
-            percentText.font = [UIFont fontWithName:@"Uninsta-Normal" size:14];
+            percentText.font = [UIFont fontWithName:@"Uninsta-Normal" size:20];
             percentText.contentMode = UIViewContentModeTop;
             percentText.delegate = self;
-            [percentText setBorderWidth:3];
-            [percentText setStartDegree:0.0];
-            [percentText setEndDegree:0.3];
-            [percentText setProgressColor:colorArray[i]];
-            [percentText setTrackColor:[UIColor grayColor]];
+            [percentText setBorderWidth:0];
             [percentText setTag:i+1];
             [self addSubview:percentText];
             
-            UILabel *subText = [[UILabel alloc] initWithFrame:CGRectMake(indent-5, CGRectGetMaxY(percentText.frame), 60+5, 40)];
+            UILabel *subText = [[UILabel alloc] initWithFrame:CGRectMake(indent-5, CGRectGetMaxY(percentText.frame)-25, 60+5, 40)];
             subText.text = subTextArray[i];
             subText.textAlignment = NSTextAlignmentCenter;
             subText.textColor = [UIColor grayColor];
