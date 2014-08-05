@@ -12,6 +12,7 @@
 #import "ToolsSalesView.h"
 #import "CurrencyView.h"
 #import "SaleView.h"
+#import "BuyersView.h"
 
 @interface VBSecondViewController ()
 {
@@ -57,6 +58,9 @@
     
     SaleView* saleView = [[SaleView alloc] initWithFrame:CGRectMake(0, 100, 320, 100)];
     [self.view addSubview:saleView];
+    
+    BuyersView* buyersView = [[BuyersView alloc] initWithFrame:CGRectMake(0, 210, 320, 100)];
+    [self.view addSubview:buyersView];
 }
 
 @end
