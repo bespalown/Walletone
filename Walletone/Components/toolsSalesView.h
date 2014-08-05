@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KAProgressLabel.h"
 
-@interface ToolsSalesView : UIView <KAProgressLabelDelegate>
+@interface ToolsSalesView : UIView
 
 //dataArray float value
 -(id)initWithFrame:(CGRect)frame dataArray:(NSArray *)dataArray;

@@ -27,7 +27,7 @@
     [rightBarButtun setTintColor:vbGreen];
     self.navigationItem.rightBarButtonItem = rightBarButtun;
     
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor grayColor]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: vbGray};
 
 }
 

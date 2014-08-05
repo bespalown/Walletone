@@ -1,10 +1,14 @@
 PODS:
-  - KAProgressLabel (1.1)
+  - KAProgressLabel (1.2)
 
 DEPENDENCIES:
-  - KAProgressLabel (= 1.1)
+  - KAProgressLabel (from `https://raw.githubusercontent.com/bespalown/KAProgressLabel/master/KAProgressLabel.podspec`)
+
+EXTERNAL SOURCES:
+  KAProgressLabel:
+    :podspec: https://raw.githubusercontent.com/bespalown/KAProgressLabel/master/KAProgressLabel.podspec
 
 SPEC CHECKSUMS:
-  KAProgressLabel: f373051ad0411c89e9ab439f992d3705ab3f0c68
+  KAProgressLabel: fb76cac150fdb8eda44f32a51343b1ab46b224cb
 
 COCOAPODS: 0.33.1

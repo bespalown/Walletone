@@ -1,15 +1,16 @@
 //
-//  toolsSalesView.m
+//  СurrencyView.m
 //  Walletone
 //
 //  Created by Viktor Bespalov on 04/08/14.
 //  Copyright (c) 2014 Viktor Bespalov. All rights reserved.
 //
 
-#import "ToolsSalesView.h"
+#import "СurrencyView.h"
 #import "KAProgressLabel.h"
 
-@implementation ToolsSalesView
+@implementation CurrencyView
+
 {
     NSArray* percentArray;
 }
@@ -27,14 +28,10 @@
                                vbLilac,
                                vbOrange,
                                vbGreen,
+                               vbRed,
                                nil];
         
-        NSArray* imageArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"imageBlue"],
-                               [UIImage imageNamed:@"imageLilac"],
-                               [UIImage imageNamed:@"imageOrange"],
-                               [UIImage imageNamed:@"imageGreen"],nil];
-        
-        NSArray* subTextArray = @[@"Банковские карты",@"Терминалы",@"Со счета мобильного",@"Салоны связи"];
+        NSArray* subTextArray = @[@"Евро",@"Рубли",@"Доллары",@"Гривны",@"Разное"];
         
         UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(self.frame), 20)];
         title.text = @"Инструменты продаж";
@@ -46,15 +43,29 @@
         CGFloat margin; //отступ справа/слева = 20
         CGFloat indent = margin = 20;
         for (int i=0; i<percentArray.count; i++) {
-            UIImageView* logo = [[UIImageView alloc] initWithImage:imageArray[i]];
-            logo.frame = CGRectMake(indent, 40, 50, 50);
-            logo.layer.cornerRadius = 25;
-            logo.layer.borderColor = vbGray.CGColor;
-            logo.layer.borderWidth = 2;
-            logo.layer.masksToBounds = YES;
-            [self addSubview:logo];
+            KAProgressLabel *percentField = [[KAProgressLabel alloc] initWithFrame:CGRectMake(indent+10, 40, 20, 50)];
+            percentField.textAlignment = NSTextAlignmentCenter;
+            percentField.textColor = colorArray[i];
+            percentField.numberOfLines = 2;
+            percentField.font = [UIFont fontWithName:@"Uninsta-Normal" size:20];
+            percentField.contentMode = UIViewContentModeTop;
+            [percentField setTag:i+10];
+            percentField.progressLabelVCBlock = ^(KAProgressLabel *label, CGFloat progress) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //[label setText:[NSString stringWithFormat:@"%.0f%%", (progress*100)]];
+                });
+            };
+            [percentField setBackBorderWidth: 1.0];
+            [percentField setFrontBorderWidth: 1.0];
+            [percentField setProgressType:ProgressLabelRect];
+            [percentField setColorTable: @{
+                                          NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):vbGray,
+                                          NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):colorArray[i]
+                                          }];
+            [self addSubview:percentField];
+
             
-            KAProgressLabel *percentText = [[KAProgressLabel alloc] initWithFrame:CGRectMake(indent, CGRectGetMaxY(logo.frame)-15, 60, 60)];
+            KAProgressLabel *percentText = [[KAProgressLabel alloc] initWithFrame:CGRectMake(indent, CGRectGetMaxY(percentField.frame)+5, 40, 20)];
             percentText.text = [NSString stringWithFormat:@"0%%"];
             percentText.textAlignment = NSTextAlignmentCenter;
             percentText.textColor = colorArray[i];
@@ -69,13 +80,14 @@
             };
             [percentText setBackBorderWidth: 0];
             [percentText setFrontBorderWidth: 0];
+            [percentText setProgressType:ProgressLabelCircle];
             [percentText setColorTable: @{
                                           NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):vbGray,
                                           NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):colorArray[i]
                                           }];
             [self addSubview:percentText];
             
-            UILabel *subText = [[UILabel alloc] initWithFrame:CGRectMake(indent-5, CGRectGetMaxY(percentText.frame)-25, 60+5, 40)];
+            UILabel *subText = [[UILabel alloc] initWithFrame:CGRectMake(indent-10, CGRectGetMaxY(percentText.frame), 40+10, 20)];
             subText.text = subTextArray[i];
             subText.textAlignment = NSTextAlignmentCenter;
             subText.textColor = vbGray;
@@ -93,11 +105,17 @@
 -(void)animateFill
 {
     for (int i = 0; i < percentArray.count; i++) {
-        KAProgressLabel* label = (KAProgressLabel *)[self viewWithTag:i+1];
-        [label setProgress:[percentArray[i] floatValue]/100
-                    timing:TPPropertyAnimationTimingEaseOut
-                  duration:1.0
-                     delay:0.0];
+        KAProgressLabel* labelText = (KAProgressLabel *)[self viewWithTag:i+1];
+        [labelText setProgress:[percentArray[i] floatValue]/100
+                        timing:TPPropertyAnimationTimingEaseOut
+                      duration:1.0
+                         delay:0.0];
+        
+        KAProgressLabel* labelField = (KAProgressLabel *)[self viewWithTag:i+10];
+        [labelField setProgress:[percentArray[i] floatValue]/100
+                         timing:TPPropertyAnimationTimingEaseOut
+                       duration:1.0
+                          delay:0.0];
     }
 }
 

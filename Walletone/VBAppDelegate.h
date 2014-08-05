@@ -11,7 +11,7 @@
 #define vbBlue [UIColor colorWithRed:96/255.0f green:190/255.0f blue:232/255.0f alpha:1]
 #define vbRed [UIColor colorWithRed:228/255.0f green:74/255.0f blue:93/255.0f alpha:1]
 #define vbLilac [UIColor colorWithRed:117/255.0f green:99/255.0f blue:170/255.0f alpha:1]
-#define vbGray [UiColor grayColor]
+#define vbGray [UIColor grayColor]
 
 #import <UIKit/UIKit.h>
 

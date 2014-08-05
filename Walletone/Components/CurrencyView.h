@@ -1,5 +1,5 @@
 //
-//  ConversionView.h
+//  СurrencyView.h
 //  Walletone
 //
 //  Created by Viktor Bespalov on 04/08/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConversionView : UIView
+@interface CurrencyView : UIView
 
 //dataArray float value
 -(id)initWithFrame:(CGRect)frame dataArray:(NSArray *)dataArray;
