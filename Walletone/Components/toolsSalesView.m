@@ -19,7 +19,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         percentArray = dataArray;
         
         NSArray* colorArray = [NSArray arrayWithObjects:
@@ -36,6 +36,10 @@
         
         NSArray* subTextArray = @[@"Банковские карты",@"Терминалы",@"Со счета мобильного",@"Салоны связи"];
         
+        UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 1)];
+        view.backgroundColor = vbGray;
+        [self addSubview:view];
+        
         UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(self.frame), 20)];
         title.text = @"Инструменты продаж";
         title.textAlignment = NSTextAlignmentCenter;
@@ -50,7 +54,7 @@
             logo.frame = CGRectMake(indent, 40, 50, 50);
             logo.layer.cornerRadius = 25;
             logo.layer.borderColor = vbGray.CGColor;
-            logo.layer.borderWidth = 2;
+            logo.layer.borderWidth = 0;
             logo.layer.masksToBounds = YES;
             [self addSubview:logo];
             

@@ -43,50 +43,42 @@
             </objects>
             <point key="canvasLocation" x="923" y="298"/>
         </scene>
-        <!--First View Controller - 23 568 Р-->
+        <!--First View Controller-->
         <scene sceneID="4d1-Jz-tGk">
             <objects>
                 <viewController storyboardIdentifier="firstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jsP-Dz-DYG" customClass="VBFirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cTC-TV-TRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="rzb-bd-NXk"/>
+                        <viewControllerLayoutGuide type="top" id="wEq-op-6wh"/>
+                        <viewControllerLayoutGuide type="bottom" id="P56-0A-bmE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NKZ-RZ-CBv">
+                    <view key="view" contentMode="scaleToFill" id="ETF-jT-5QE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsn-us-bEn">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-Ii-f8b">
-                                        <rect key="frame" x="172" y="226" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUS-03-VQO">
-                                        <rect key="frame" x="49" y="0.0" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-Wn-Jh7">
+                                <rect key="frame" x="20" y="103" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mku-Y9-q5h">
+                                <rect key="frame" x="0.0" y="94" width="320" height="474"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fsn-us-bEn" firstAttribute="top" secondItem="cTC-TV-TRb" secondAttribute="bottom" id="8Ph-wk-c6T"/>
-                            <constraint firstItem="fsn-us-bEn" firstAttribute="leading" secondItem="NKZ-RZ-CBv" secondAttribute="leading" id="GVQ-sY-uYE"/>
-                            <constraint firstItem="rzb-bd-NXk" firstAttribute="top" secondItem="fsn-us-bEn" secondAttribute="bottom" id="gwr-FL-GT1"/>
-                            <constraint firstAttribute="trailing" secondItem="fsn-us-bEn" secondAttribute="trailing" id="yjJ-E7-KxZ"/>
+                            <constraint firstItem="P56-0A-bmE" firstAttribute="top" secondItem="mku-Y9-q5h" secondAttribute="bottom" id="GEU-cX-wtp"/>
+                            <constraint firstItem="mku-Y9-q5h" firstAttribute="top" secondItem="wEq-op-6wh" secondAttribute="bottom" id="GOQ-Xz-jcj"/>
+                            <constraint firstItem="mku-Y9-q5h" firstAttribute="leading" secondItem="ETF-jT-5QE" secondAttribute="leading" id="Gqv-So-8EA"/>
+                            <constraint firstAttribute="trailing" secondItem="mku-Y9-q5h" secondAttribute="trailing" id="KWY-eM-7Ey"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="23 568 Р" prompt="Баланс в рублях" id="HIf-bS-REK"/>
+                    <navigationItem key="navigationItem" prompt="Баланс в рублях" id="HIf-bS-REK"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="scrollView" destination="fsn-us-bEn" id="0Hc-uR-HsX"/>
+                        <outlet property="scrollView" destination="mku-Y9-q5h" id="WHD-hj-iMH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Awc-v8-Z61" userLabel="First Responder" sceneMemberID="firstResponder"/>

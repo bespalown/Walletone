@@ -26,7 +26,7 @@
     if (self) {
         // Initialization code
         isleftButtonReverse = NO;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         
         UIButton* leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [leftButton setFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame)/2, CGRectGetHeight(self.frame))];
@@ -37,6 +37,7 @@
         
         UILabel *leftButtonHeaderlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(leftButton.frame), 30)];
         leftButtonHeaderlabel.text = @"Покупателей за месяц";
+        leftButtonHeaderlabel.textColor = vbGray;
         leftButtonHeaderlabel.font = [UIFont fontWithName:@"Uninsta-Normal" size:12];
         leftButtonHeaderlabel.textAlignment = NSTextAlignmentCenter;
         leftButtonHeaderlabel.userInteractionEnabled = NO;
@@ -65,6 +66,7 @@
         
         leftButton_sumlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(leftButton_countSales.frame), CGRectGetWidth(leftButton.frame), 30)];
         leftButton_sumlabel.text = [NSString stringWithFormat:@"которые потратили \n %@ Р", @"234 900"];
+        leftButton_sumlabel.textColor = vbGray;
         leftButton_sumlabel.font = [UIFont fontWithName:@"Uninsta-Normal" size:12];
         leftButton_sumlabel.textAlignment = NSTextAlignmentCenter;
         leftButton_sumlabel.numberOfLines = 2;
@@ -88,6 +90,7 @@
         
         UILabel *rightButtonHeaderlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(rightButton.frame), 30)];
         rightButtonHeaderlabel.text = @"Средний чек";
+        rightButtonHeaderlabel.textColor = vbGray;
         rightButtonHeaderlabel.font = [UIFont fontWithName:@"Uninsta-Normal" size:12];
         rightButtonHeaderlabel.textAlignment = NSTextAlignmentCenter;
         rightButtonHeaderlabel.userInteractionEnabled = NO;

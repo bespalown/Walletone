@@ -19,7 +19,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         percentArray = dataArray;
         
         NSArray* colorArray = [NSArray arrayWithObjects:
@@ -57,8 +57,8 @@
                     [label setText:[NSString stringWithFormat:@"%.0f%%", (progress*100)]];
                 });
             };
-            [percentText setBackBorderWidth: 3.0];
-            [percentText setFrontBorderWidth: 3.0];
+            [percentText setBackBorderWidth: 2.0];
+            [percentText setFrontBorderWidth: 2.0];
             [percentText setColorTable: @{
                                           NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):vbGray,
                                           NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):colorArray[i]

@@ -179,14 +179,14 @@
 		3076CDF61809B50100527E6C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				665883DB198ECBFA001CDA73 /* VBFirstViewController.h */,
-				665883DC198ECBFA001CDA73 /* VBFirstViewController.m */,
 				665883DD198ECBFA001CDA73 /* VBLeftMenuViewController.h */,
 				665883DE198ECBFA001CDA73 /* VBLeftMenuViewController.m */,
 				665883DF198ECBFA001CDA73 /* VBRightMenuViewController.h */,
 				665883E0198ECBFA001CDA73 /* VBRightMenuViewController.m */,
 				665883E1198ECBFA001CDA73 /* VBRootViewController.h */,
 				665883E2198ECBFA001CDA73 /* VBRootViewController.m */,
+				665883DB198ECBFA001CDA73 /* VBFirstViewController.h */,
+				665883DC198ECBFA001CDA73 /* VBFirstViewController.m */,
 				665883E3198ECBFA001CDA73 /* VBSecondViewController.h */,
 				665883E4198ECBFA001CDA73 /* VBSecondViewController.m */,
 			);

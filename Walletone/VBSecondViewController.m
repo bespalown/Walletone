@@ -19,8 +19,6 @@
     ConversionView* conversionView;
     ToolsSalesView* toolsSalesView;
     CurrencyView* currencyView;
-    
-    UILabel* label;
 }
 @end
 
