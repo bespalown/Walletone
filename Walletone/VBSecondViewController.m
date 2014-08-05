@@ -10,7 +10,7 @@
 
 #import "ConversionView.h"
 #import "ToolsSalesView.h"
-#import "СurrencyView.h"
+#import "CurrencyView.h"
 
 @interface VBSecondViewController ()
 {

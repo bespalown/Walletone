@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Viktor Bespalov. All rights reserved.
 //
 
-#import "СurrencyView.h"
+#import "CurrencyView.h"
 #import "KAProgressLabel.h"
 
 @implementation CurrencyView
@@ -34,7 +34,7 @@
         NSArray* subTextArray = @[@"Евро",@"Рубли",@"Доллары",@"Гривны",@"Разное"];
         
         UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(self.frame), 20)];
-        title.text = @"Инструменты продаж";
+        title.text = @"Валюты";
         title.textAlignment = NSTextAlignmentCenter;
         title.textColor = vbGray;
         title.font = [UIFont fontWithName:@"Uninsta-Normal" size:14];
