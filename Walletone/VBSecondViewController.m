@@ -11,12 +11,15 @@
 #import "ConversionView.h"
 #import "ToolsSalesView.h"
 #import "CurrencyView.h"
+#import "SaleView.h"
 
 @interface VBSecondViewController ()
 {
     ConversionView* conversionView;
     ToolsSalesView* toolsSalesView;
     CurrencyView* currencyView;
+    
+    UILabel* label;
 }
 @end
 
@@ -38,6 +41,7 @@
 
 -(void)viewDidLoad
 {
+    /*
     NSArray *percentArray = @[@"33",@"56",@"87",@"32"];
     conversionView = [[ConversionView alloc] initWithFrame:CGRectMake(0, 100, 320, 150) dataArray:percentArray];
     [self.view addSubview:conversionView];
@@ -49,6 +53,10 @@
     NSArray* currencyArray = @[@"34",@"21",@"28",@"97",@"10"];
     currencyView = [[CurrencyView alloc] initWithFrame:CGRectMake(0, 420, 320, 150) dataArray:currencyArray];
     [self.view addSubview:currencyView];
+     */
+    
+    SaleView* saleView = [[SaleView alloc] initWithFrame:CGRectMake(0, 100, 320, 100)];
+    [self.view addSubview:saleView];
 }
 
 @end

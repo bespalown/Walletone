@@ -32,6 +32,7 @@
 		665883F6198ECC41001CDA73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 665883F5198ECC41001CDA73 /* main.m */; };
 		665883F9198ECC65001CDA73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 665883F7198ECC65001CDA73 /* InfoPlist.strings */; };
 		66CD3D541990BD22005D90AC /* CurrencyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CD3D531990BD22005D90AC /* CurrencyView.m */; };
+		66CD3D571990C82A005D90AC /* SaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CD3D561990C82A005D90AC /* SaleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		665883F8198ECC65001CDA73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Walletone/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		66CD3D521990BD22005D90AC /* CurrencyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrencyView.h; path = Walletone/Components/CurrencyView.h; sourceTree = SOURCE_ROOT; };
 		66CD3D531990BD22005D90AC /* CurrencyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyView.m; path = Walletone/Components/CurrencyView.m; sourceTree = SOURCE_ROOT; };
+		66CD3D551990C82A005D90AC /* SaleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaleView.h; path = Walletone/Components/SaleView.h; sourceTree = SOURCE_ROOT; };
+		66CD3D561990C82A005D90AC /* SaleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaleView.m; path = Walletone/Components/SaleView.m; sourceTree = SOURCE_ROOT; };
 		675D59D8AEED4CBC83C3F18F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B87CCC2F20449C8D76B7BF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +213,8 @@
 				664DC412198FCCDC00ECB3BE /* ToolsSalesView.m */,
 				66CD3D521990BD22005D90AC /* CurrencyView.h */,
 				66CD3D531990BD22005D90AC /* CurrencyView.m */,
+				66CD3D551990C82A005D90AC /* SaleView.h */,
+				66CD3D561990C82A005D90AC /* SaleView.m */,
 			);
 			name = ComponentViews;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				665883E7198ECBFA001CDA73 /* VBRightMenuViewController.m in Sources */,
+				66CD3D571990C82A005D90AC /* SaleView.m in Sources */,
 				665883E6198ECBFA001CDA73 /* VBLeftMenuViewController.m in Sources */,
 				664DC3EE198F752400ECB3BE /* ConversionView.m in Sources */,
 				664DC413198FCCDC00ECB3BE /* ToolsSalesView.m in Sources */,
