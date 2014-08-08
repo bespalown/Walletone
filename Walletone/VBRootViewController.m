@@ -8,6 +8,7 @@
 
 #import "VBRootViewController.h"
 #import "VBLeftMenuViewController.h"
+#import "UIImage+Overlay.h"
 
 @interface VBRootViewController ()
 
@@ -27,7 +28,7 @@
     self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentViewController"];
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
     //self.rightMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"rightMenuViewController"];
-    self.backgroundImage = [UIImage imageNamed:@"MenuBackground"];
+    self.backgroundImage = [[UIImage imageNamed:@"MenuBackground"] imageWithColor:vbBlue];
     self.delegate = self;
 }
 

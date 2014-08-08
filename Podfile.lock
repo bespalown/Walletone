@@ -1,7 +1,9 @@
 PODS:
+  - BEMSimpleLineGraph (2.3)
   - KAProgressLabel (1.2)
 
 DEPENDENCIES:
+  - BEMSimpleLineGraph
   - KAProgressLabel (from `https://raw.githubusercontent.com/bespalown/KAProgressLabel/master/KAProgressLabel.podspec`)
 
 EXTERNAL SOURCES:
@@ -9,6 +11,7 @@ EXTERNAL SOURCES:
     :podspec: https://raw.githubusercontent.com/bespalown/KAProgressLabel/master/KAProgressLabel.podspec
 
 SPEC CHECKSUMS:
+  BEMSimpleLineGraph: 5fb192c00c48f8123654e2b943b9227061f0dfd2
   KAProgressLabel: fb76cac150fdb8eda44f32a51343b1ab46b224cb
 
 COCOAPODS: 0.33.1

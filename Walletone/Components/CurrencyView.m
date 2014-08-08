@@ -33,16 +33,18 @@
         
         NSArray* subTextArray = @[@"Евро",@"Рубли",@"Доллары",@"Гривны",@"Разное"];
         
-        UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(self.frame), 20)];
+        UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, CGRectGetWidth(self.frame), 20)];
         title.text = @"Валюты";
         title.textAlignment = NSTextAlignmentCenter;
         title.textColor = vbGray;
-        title.font = [UIFont fontWithName:@"Uninsta-Normal" size:14];
+        title.font = [UIFont fontWithName:@"Uninsta-Normal" size:16];
         [self addSubview:title];
         
+        /*
         UIView* percentFieldBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 40, CGRectGetWidth(self.frame), 50)];
         percentFieldBackground.backgroundColor = [UIColor colorWithRed:46/255.0f green:47/255.0f blue:50/255.0f alpha:1];
         [self addSubview:percentFieldBackground];
+         */
         
         CGFloat margin; //отступ справа/слева = 20
         CGFloat indent = margin = 20;
@@ -69,7 +71,7 @@
             [self addSubview:percentField];
 
             
-            KAProgressLabel *percentText = [[KAProgressLabel alloc] initWithFrame:CGRectMake(indent, CGRectGetMaxY(percentField.frame)+5, 40, 20)];
+            KAProgressLabel *percentText = [[KAProgressLabel alloc] initWithFrame:CGRectMake(indent, CGRectGetMaxY(percentField.frame)+15, 40, 20)];
             percentText.text = [NSString stringWithFormat:@"0%%"];
             percentText.textAlignment = NSTextAlignmentCenter;
             percentText.textColor = colorArray[i];
@@ -91,12 +93,12 @@
                                           }];
             [self addSubview:percentText];
             
-            UILabel *subText = [[UILabel alloc] initWithFrame:CGRectMake(indent-10, CGRectGetMaxY(percentText.frame), 40+10, 20)];
+            UILabel *subText = [[UILabel alloc] initWithFrame:CGRectMake(indent-5, CGRectGetMaxY(percentText.frame), 40+15, 20)];
             subText.text = subTextArray[i];
             subText.textAlignment = NSTextAlignmentCenter;
             subText.textColor = vbGray;
             subText.numberOfLines = 2;
-            subText.font = [UIFont fontWithName:@"Uninsta-Normal" size:12];
+            subText.font = [UIFont fontWithName:@"Uninsta-Normal" size:11];
             subText.contentMode = UIViewContentModeTop;
             [self addSubview:subText];
             
