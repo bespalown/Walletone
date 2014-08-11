@@ -1,5 +1,5 @@
 #include "Pods-KAProgressLabel.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/KAProgressLabel" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/BEMSimpleLineGraph" "${PODS_ROOT}/Headers/KAProgressLabel"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/KAProgressLabel" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/BEMSimpleLineGraph" "${PODS_ROOT}/Headers/KAProgressLabel" "${PODS_ROOT}/Headers/UINavigationItem+AnimatedPrompt"
 OTHER_LDFLAGS = -ObjC ${PODS_KAPROGRESSLABEL_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}

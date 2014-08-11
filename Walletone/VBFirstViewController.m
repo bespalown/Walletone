@@ -15,6 +15,7 @@
 #import "BuyersView.h"
 #import "VBGraphView.h"
 #import "UIImage+Overlay.h"
+#import "UINavigationItem+AnimatedPrompt.h"
 
 @interface VBFirstViewController () <UIScrollViewDelegate>
 {
@@ -103,10 +104,27 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGPoint p = scrollView.contentOffset;
-    NSLog(@"x=%f,y=%f",p.x,p.y);
+    //NSLog(@"x=%f,y=%f",p.x,p.y);
     if (p.y >= 176.0f) {
         [currencyView animateFill];
     }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.navigationItem.prompt = nil;
+}
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate) {
+        self.navigationItem.prompt = @"Баланс в рублях";
+    }
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    self.navigationItem.prompt = @"Баланс в рублях";
 }
 
 @end

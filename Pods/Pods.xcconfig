@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/BEMSimpleLineGraph" "${PODS_ROOT}/Headers/KAProgressLabel"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/BEMSimpleLineGraph" -isystem "${PODS_ROOT}/Headers/KAProgressLabel"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/BEMSimpleLineGraph" "${PODS_ROOT}/Headers/KAProgressLabel" "${PODS_ROOT}/Headers/UINavigationItem+AnimatedPrompt"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/BEMSimpleLineGraph" -isystem "${PODS_ROOT}/Headers/KAProgressLabel" -isystem "${PODS_ROOT}/Headers/UINavigationItem+AnimatedPrompt"
 OTHER_LDFLAGS = -ObjC -framework QuartzCore
 PODS_ROOT = ${SRCROOT}/Pods
